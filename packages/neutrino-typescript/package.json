@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-typescript",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Neutrion middleware for typescript support",
   "keywords": [
     "neutrino",
@@ -17,8 +17,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/preset-typescript": "^7.6.0",
     "@babel/core": "^7.6.4",
+    "@babel/preset-typescript": "^7.6.0",
     "babel-merge": "^3.0.0",
     "deepmerge": "^4.1.1",
     "fork-ts-checker-webpack-plugin": "^1.5.1"
