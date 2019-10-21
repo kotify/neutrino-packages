@@ -25,5 +25,6 @@
   },
   "peerDependencies": {
     "typescript": "3.x"
-  }
+  },
+  "gitHead": "7c8fd0b4e600d9643c5974c6988a927a99e1e456"
 }
