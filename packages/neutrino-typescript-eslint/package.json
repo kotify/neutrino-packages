@@ -1,0 +1,40 @@
+{
+  "name": "@kotify/neutrino-typescript-eslint",
+  "version": "0.0.0",
+  "description": "Neutrino middleware for eslint with typescript support",
+  "keywords": [
+    "eslint",
+    "typescript",
+    "neutrino"
+  ],
+  "author": "Konstantin Alekseev <konstantin@kotify.com>",
+  "homepage": "https://github.com/kotify/neutrino-packages#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotify/neutrino-packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kotify/neutrino-packages/issues"
+  },
+  "dependencies": {
+    "deepmerge": "^4.1.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0"
+  },
+  "peerDependencies": {
+    "eslint": "6.x"
+  }
+}

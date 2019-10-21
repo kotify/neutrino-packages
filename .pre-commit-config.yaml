@@ -1,0 +1,8 @@
+repos:
+  -   repo: local
+      hooks:
+      -   id: eslint
+          name: eslint
+          files: \.js$
+          entry: eslint
+          language: node
