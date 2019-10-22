@@ -25,20 +25,25 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.4.0",
-    "@typescript-eslint/parser": "^2.4.0",
-    "deepmerge": "^4.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "deepmerge": "^4.2.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
-    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.18.2"
   },
   "peerDependencies": {
     "eslint": "6.x"
+  },
+  "scripts": {
+    "upgrade-minor": "yarn upgrade && syncyarnlock -s -k && yarn install",
+    "upgrade-latest": "yarn upgrade --latest && syncyarnlock -s -k && yarn install"
   },
   "gitHead": "7c8fd0b4e600d9643c5974c6988a927a99e1e456"
 }

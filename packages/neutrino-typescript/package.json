@@ -20,11 +20,15 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-typescript": "^7.6.0",
     "babel-merge": "^3.0.0",
-    "deepmerge": "^4.1.1",
+    "deepmerge": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^1.5.1"
   },
   "peerDependencies": {
     "typescript": "3.x"
+  },
+  "scripts": {
+    "upgrade-minor": "yarn upgrade && syncyarnlock -s -k && yarn install",
+    "upgrade-latest": "yarn upgrade --latest && syncyarnlock -s -k && yarn install"
   },
   "gitHead": "7c8fd0b4e600d9643c5974c6988a927a99e1e456"
 }
