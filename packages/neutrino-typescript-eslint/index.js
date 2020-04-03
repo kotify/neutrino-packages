@@ -1,47 +1,38 @@
 const merge = require("deepmerge");
 
-module.exports = (options, extendsReact = false) => neutrino => {
+module.exports = (options, extendsReact = false) => (neutrino) => {
   const defaults = {
     parser: "@typescript-eslint/parser",
     parserOptions: {
-      project: "./tsconfig.json"
+      project: "./tsconfig.json",
     },
-    plugins: ["@typescript-eslint", "prettier", "standard"],
+    plugins: ["@typescript-eslint", "standard"],
     extends: [
       "standard",
       "eslint:recommended",
       "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
+      "plugin:@typescript-eslint/recommended",
     ]
       .concat(extendsReact ? ["plugin:react/recommended"] : [])
       .concat([
         "plugin:eslint-comments/recommended",
         "prettier",
         "prettier/@typescript-eslint",
-        "prettier/standard"
+        "prettier/standard",
       ])
       .concat(extendsReact ? ["prettier/react"] : []),
-    rules: {
-      "prettier/prettier": [
-        "warn",
-        {
-          trailingComma: "es5",
-          printWidth: 90
-        }
-      ]
-    },
     settings: {
       "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"]
-      }
-    }
+        "@typescript-eslint/parser": [".ts", ".tsx"],
+      },
+    },
   };
   const mergedOptions = merge(defaults, options || {});
   neutrino.config.module
     .rule("lint")
     .test(/\.(mjs|jsx|js|tsx|ts)$/)
     .use("eslint")
-    .tap(baseOptions => {
+    .tap((baseOptions) => {
       if (baseOptions.useEslintrc) {
         return baseOptions;
       }
