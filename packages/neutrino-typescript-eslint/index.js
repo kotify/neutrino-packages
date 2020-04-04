@@ -2,6 +2,7 @@ const merge = require("deepmerge");
 
 module.exports = (options, extendsReact = false) => (neutrino) => {
   const defaults = {
+    parser: "@typescript-eslint/parser",
     parserOptions: {
       project: "./tsconfig.json",
     },
