@@ -14,12 +14,7 @@ module.exports = (options, extendsReact = false) => (neutrino) => {
       "plugin:@typescript-eslint/recommended",
     ]
       .concat(extendsReact ? ["plugin:react/recommended"] : [])
-      .concat([
-        "plugin:eslint-comments/recommended",
-        "prettier",
-        "prettier/@typescript-eslint",
-        "prettier/standard",
-      ])
+      .concat(["prettier", "prettier/@typescript-eslint", "prettier/standard"])
       .concat(extendsReact ? ["prettier/react"] : []),
     settings: {
       "import/parsers": {
