@@ -10,13 +10,20 @@ Options:
 - forkTSChecker.options - object, options to pass to `fork-ts-checker-webpack-plugin`
 
 Example:
+
 ```
 const typescript = require('neutrino-typescript');
 
 module.exports = {
     use: [
         react(),
-        typescript({ forkTSChecker: { options: { watch: ['./src'] } } }),
+        typescript({
+            forkTSChecker: {
+                options: {
+                    typescript: { memoryLimit: 3000 },
+                },
+            },
+        }),
     ]
 }
 ```
