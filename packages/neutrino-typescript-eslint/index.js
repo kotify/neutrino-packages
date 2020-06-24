@@ -1,30 +1,42 @@
 const merge = require("deepmerge");
 
-module.exports = (options, extendsReact = false) => (neutrino) => {
-  const defaults = {
+module.exports = (options = {}, config = { react: false }) => (neutrino) => {
+  let defaults = {
     parser: "@typescript-eslint/parser",
-    parserOptions: {
-      project: "./tsconfig.json",
-    },
     extends: [
       "standard",
       "plugin:import/typescript",
       "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
       "plugin:@typescript-eslint/recommended",
       "plugin:eslint-comments/recommended",
     ]
-      .concat(extendsReact ? ["plugin:react/recommended"] : [])
+      .concat(
+        config.react
+          ? ["plugin:react/recommended", "plugin:react-hooks/recommended"]
+          : []
+      )
       .concat(["prettier", "prettier/@typescript-eslint", "prettier/standard"])
-      .concat(extendsReact ? ["prettier/react"] : []),
+      .concat(config.react ? ["prettier/react"] : []),
     rules: {
       "no-debugger": process.env.NODE_ENV === "production" ? "error" : 0,
       "no-console": process.env.NODE_ENV === "production" ? "error" : 0,
       "prefer-const": "error",
       "eslint-comments/no-unused-disable": "error",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { ignoreRestSiblings: true },
+      ],
     },
   };
-  const mergedOptions = merge(defaults, options || {});
+  if (config.react) {
+    defaults = merge(defaults, {
+      rules: {
+        "react/prop-types": 0,
+      },
+      settings: { react: { version: "detect" } },
+    });
+  }
+  const mergedOptions = merge(defaults, options);
   neutrino.config.module
     .rule("lint")
     .test(/\.(mjs|jsx|js|tsx|ts)$/)
