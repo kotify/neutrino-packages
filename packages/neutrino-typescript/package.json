@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-typescript",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Neutrion middleware for typescript support",
   "keywords": [
     "neutrino",
