@@ -1,6 +1,6 @@
 # Neutrino typescript middleware
 
-Adds typescript 3.x support via `@babel/preset-typescript`.
+Adds typescript 3+ support via `@babel/preset-typescript`.
 
 ## Usage
 

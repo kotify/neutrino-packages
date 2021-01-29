@@ -17,14 +17,14 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/preset-typescript": "^7.10.1",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
     "babel-merge": "^3.0.0",
     "deepmerge": "^4.2.2",
-    "fork-ts-checker-webpack-plugin": "^5.0.4"
+    "fork-ts-checker-webpack-plugin": "^6.1.0"
   },
   "peerDependencies": {
-    "typescript": "3.x"
+    "typescript": "3.x || 4.x"
   },
   "scripts": {
     "upgrade-minor": "yarn upgrade && syncyarnlock -s -k && yarn install",
