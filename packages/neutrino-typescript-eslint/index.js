@@ -15,7 +15,7 @@ module.exports = (options = {}, config = { react: false }) => (neutrino) => {
           ? ["plugin:react/recommended", "plugin:react-hooks/recommended"]
           : []
       )
-      .concat(["prettier", "prettier/@typescript-eslint", "prettier/standard"])
+      .concat(["prettier"])
       .concat(config.react ? ["prettier/react"] : []),
     rules: {
       "no-debugger": process.env.NODE_ENV === "production" ? "error" : 0,
