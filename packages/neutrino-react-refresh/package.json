@@ -1,10 +1,10 @@
 {
-  "name": "@kotify/neutrino-typescript",
+  "name": "@kotify/neutrino-react-refresh",
   "version": "5.0.0-alpha.0",
-  "description": "Neutrino middleware for typescript support",
+  "description": "Neutrino middleware for react-refresh support",
   "keywords": [
     "neutrino",
-    "typescript"
+    "react-refresh"
   ],
   "author": "Konstantin Alekseev <konstantin@kotify.com>",
   "homepage": "https://github.com/kotify/neutrino-packages#readme",
@@ -17,18 +17,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/core": "^7.13.14",
-    "@babel/preset-typescript": "^7.13.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "babel-merge": "^3.0.0",
-    "deepmerge": "^4.2.2",
-    "fork-ts-checker-webpack-plugin": "^6.2.0"
-  },
-  "peerDependencies": {
-    "typescript": "3.x || 4.x"
+    "react-refresh": "^0.10.0"
   },
   "scripts": {
     "upgrade-minor": "yarn upgrade && syncyarnlock -s -k && yarn install",
     "upgrade-latest": "yarn upgrade --latest && syncyarnlock -s -k && yarn install"
-  },
-  "gitHead": "7c8fd0b4e600d9643c5974c6988a927a99e1e456"
+  }
 }
