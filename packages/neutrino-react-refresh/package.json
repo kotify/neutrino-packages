@@ -17,9 +17,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "babel-merge": "^3.0.0",
-    "react-refresh": "^0.10.0"
+    "react-refresh": "^0.11.0"
   },
   "scripts": {
     "upgrade-minor": "yarn upgrade && syncyarnlock -s -k && yarn install",
