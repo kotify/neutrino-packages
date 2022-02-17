@@ -7,13 +7,8 @@
     "node": true
   },
   "plugins": ["prettier"],
-  "extends": [
-    "eslint:recommended",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "prettier"],
   "rules": {
-    "prettier/prettier": [
-      "warn"
-    ]
+    "prettier/prettier": ["warn"]
   }
 }

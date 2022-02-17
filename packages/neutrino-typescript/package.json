@@ -17,8 +17,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/core": "^7.16.5",
-    "@babel/preset-typescript": "^7.16.5",
+    "@babel/core": "^7.17.4",
+    "@babel/preset-typescript": "^7.16.7",
     "babel-merge": "^3.0.0",
     "deepmerge": "^4.2.2",
     "fork-ts-checker-webpack-plugin": "^6.5.0"
