@@ -17,11 +17,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/core": "^7.17.4",
+    "@babel/core": "^7.17.9",
     "@babel/preset-typescript": "^7.16.7",
     "babel-merge": "^3.0.0",
     "deepmerge": "^4.2.2",
-    "fork-ts-checker-webpack-plugin": "^6.5.0"
+    "fork-ts-checker-webpack-plugin": "^7.2.7"
   },
   "peerDependencies": {
     "typescript": "3.x || 4.x"
