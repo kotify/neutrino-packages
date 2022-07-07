@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-react-refresh",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "description": "Neutrino middleware for react-refresh support",
   "keywords": [
     "neutrino",
