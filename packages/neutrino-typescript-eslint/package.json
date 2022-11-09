@@ -1,6 +1,6 @@
 {
   "name": "@kotify/neutrino-typescript-eslint",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Neutrino middleware for eslint with typescript support",
   "keywords": [
     "eslint",
