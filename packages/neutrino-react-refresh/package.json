@@ -24,5 +24,6 @@
   "scripts": {
     "upgrade-minor": "yarn upgrade && syncyarnlock -s -k && yarn install",
     "upgrade-latest": "yarn upgrade --latest && syncyarnlock -s -k && yarn install"
-  }
+  },
+  "gitHead": "db7e7ce96027ca875eadc3381f4bb3474e64d59a"
 }
