@@ -17,7 +17,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.8",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "babel-merge": "^3.0.0",
     "react-refresh": "^0.14.0"
   },
